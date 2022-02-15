@@ -1,0 +1,43 @@
+﻿@page
+@model WebApp.Pages.SamplePages.ControlsModel
+@{
+    ViewData["Title"] = "Various Form Controls";
+}
+
+@section CustomCSS
+{
+    @*
+    the file _MyCustomCSS contains valid code that represents css
+    the partial tag will bring in the contents of the file
+    the section reference of CustomCSS will place the file contents on the layout pagein the 'named' render section
+    *@
+<partial name="_MyCustomCSS" />
+}
+
+<h1>Various Form Controls</h1>
+
+@if (!string.IsNullOrWhiteSpace(Model.Feedback))
+{
+    <p>@Model.Feedback</p>
+}
+
+<section class="setflex">
+    <div class="onethird">
+        <h3>Textboxes</h3>
+        <form method="post">
+            <button type="submit" value="textbox" id="theTextButton" name="theTextButton" asp-page-handler="TextBox">Text Submit</button>
+        </form>
+    </div>
+    <div class="onethird">
+        <h3>RadioButtons, Checkbox, TextArea</h3>
+        <form method="post">
+            <button type="submit" value="RadioCheckArea" id="theRadioCheckAreaButton" name="theRadioCheckAreaButton" asp-page-handler="RadioCheckArea">Radio/Check/Area Submit</button>
+        </form>
+    </div>
+    <div class="onethird">
+        <h3>List and Slider</h3>
+        <form method="post">
+            <button type="submit" value="ListSlider" id="theListSliderButton" name="theListSliderButton" asp-page-handler="ListSlider">ListSlider Submit</button>
+        </form>
+    </div>
+</section>

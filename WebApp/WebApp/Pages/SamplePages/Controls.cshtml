@@ -23,9 +23,28 @@
 
 <section class="setflex">
     <div class="onethird">
-        <h3>Textboxes</h3>
+        <h3>TextBoxes</h3>
         <form method="post">
-            <button type="submit" value="textbox" id="theTextButton" name="theTextButton" asp-page-handler="TextBox">Text Submit</button>
+            <label>
+                Email input
+                <input type="email" asp-for="EmailText"
+                    placeholder="enter email"/>
+            </label>
+            <br/>
+            <label>
+                Password input
+                <input type="password" asp-for="PasswordText"
+                    placeholder="enter password"/>
+            </label>
+            <br/>
+            <label>
+                Date input
+                <input type="date" asp-for="DateText"
+                    placeholder="enter a date"/>
+            </label>
+            <br/>
+            <button type="submit" value="textbox" id="theTextButton"
+                name="theTextButton" asp-page-handler="Text">Text Submit</button>
         </form>
     </div>
     <div class="onethird">
@@ -37,7 +56,7 @@
     <div class="onethird">
         <h3>List and Slider</h3>
         <form method="post">
-            <button type="submit" value="ListSlider" id="theListSliderButton" name="theListSliderButton" asp-page-handler="ListSlider">ListSlider Submit</button>
+            <button type="submit" value="ListSlider" id="theListSliderButton" name="theListSliderButton" asp-page-handler="ListSlider">List/Slider Submit</button>
         </form>
     </div>
 </section>

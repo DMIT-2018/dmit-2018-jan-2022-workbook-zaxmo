@@ -23,6 +23,13 @@ namespace ChinookSystem.BLL
 
             //add any services that you create iun the class library
             //using .AddTransient<T>(...)
+            services.AddTransient<AboutServices>((serviceProvider) =>
+            {
+                var context = serviceProvider.GetRequiredService<Chinook2018Context>();
+                //create an instance of the service and return the instance
+                return new AboutServices(context);
+
+            });
         }
 
     }

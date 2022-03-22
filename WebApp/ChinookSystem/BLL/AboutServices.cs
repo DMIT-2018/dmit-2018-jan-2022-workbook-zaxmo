@@ -23,7 +23,7 @@ namespace ChinookSystem.BLL
 
         //obtan the context link from IServiceCollection when this
         //  set of services is injected into the "outside user"
-        internal AboutServices(Chinook2018Context context)
+        internal AboutServices(Chinook2018Context context) 
         {
             _context = context;
         }

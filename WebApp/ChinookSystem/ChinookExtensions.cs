@@ -30,6 +30,20 @@ namespace ChinookSystem.BLL
                 return new AboutServices(context);
 
             });
+            services.AddTransient<GenreServices>((serviceProvider) =>
+            {
+                var context = serviceProvider.GetRequiredService<Chinook2018Context>();
+                //create an instance of the service and return the instance
+                return new GenreServices(context);
+
+            });
+            services.AddTransient<AlbumServices>((serviceProvider) =>
+            {
+                var context = serviceProvider.GetRequiredService<Chinook2018Context>();
+                //create an instance of the service and return the instance
+                return new AlbumServices(context);
+
+            });
         }
 
     }

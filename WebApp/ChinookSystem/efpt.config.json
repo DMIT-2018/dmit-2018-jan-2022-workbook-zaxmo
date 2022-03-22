@@ -26,6 +26,10 @@
          "ObjectType": 0
       },
       {
+         "Name": "[dbo].[DbVersion]",
+         "ObjectType": 0
+      },
+      {
          "Name": "[dbo].[Employees]",
          "ObjectType": 0
       },

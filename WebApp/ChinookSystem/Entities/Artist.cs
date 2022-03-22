@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ChinookSystem.Entities
 {
-    internal partial class Artist
+    public partial class Artist
     {
         public Artist()
         {

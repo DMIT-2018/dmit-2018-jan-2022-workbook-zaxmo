@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ChinookSystem.Entities
 {
-    internal partial class Playlist
+    public partial class Playlist
     {
         public Playlist()
         {
